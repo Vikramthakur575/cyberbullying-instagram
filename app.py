@@ -1,30 +1,19 @@
-from flask import Flask, render_template, request
-
-app = Flask(__name__)
+import streamlit as st
 
 bullying_words = ["stupid", "idiot", "useless", "hate", "kill"]
 
-@app.route("/", methods=["GET", "POST"])
-def home():
-    message = ""
-    warning = ""
-    show_image = False
+st.set_page_config(page_title="Cyberbullying Detection", layout="centered")
 
-    if request.method == "POST":
-        comment = request.form["comment"].lower()
+st.markdown("## 📸 Mini Instagram – Cyberbullying Detection")
 
-        if any(word in comment for word in bullying_words):
-            warning = "⚠️ Cyberbullying detected! Please delete the comment or action will be taken."
-            show_image = True
-        else:
-            message = "✅ Comment posted successfully."
+st.image("static/post.jpg", use_column_width=True)
+st.markdown("**@insta_fun_user**")
 
-    return render_template(
-        "index.html",
-        message=message,
-        warning=warning,
-        show_image=show_image
-    )
+comment = st.text_input("Add a comment")
 
-if __name__ == "__main__":
-    app.run(debug=True)
+if st.button("Post"):
+    if any(word in comment.lower() for word in bullying_words):
+        st.error("⚠️ Cyberbullying detected! Delete the comment or action will be taken.")
+        st.image("static/warning.png", width=300)
+    else:
+        st.success("✅ Comment posted successfully.")
