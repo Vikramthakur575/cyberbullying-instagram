@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:ns1="http://example.org/cyberbullying#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+>
+  <rdf:Description rdf:about="http://example.org/cyberbullying#Message1">
+    <rdf:type rdf:resource="http://example.org/cyberbullying#Message"/>
+    <ns1:messageText>You are stupid and useless</ns1:messageText>
+    <ns1:hasBullyingType rdf:resource="http://example.org/cyberbullying#VerbalAbuse"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cyberbullying#User1">
+    <rdf:type rdf:resource="http://example.org/cyberbullying#User"/>
+    <ns1:sendsMessage rdf:resource="http://example.org/cyberbullying#Message1"/>
+  </rdf:Description>
+</rdf:RDF>

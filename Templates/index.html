@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Instagram</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="insta-card">
+
+    <!-- Header -->
+    <div class="insta-header">
+        <div class="profile-pic"></div>
+        <span class="username">insta_fun_user</span>
+    </div>
+
+    <!-- Post Image -->
+    <img src="/static/post.jpg" class="post-img">
+
+    <!-- Action Icons -->
+    <div class="actions">
+        ❤️ 💬 ✈️
+    </div>
+
+    <!-- Caption -->
+    <p class="caption">
+        <span class="username">insta_fun_user</span>
+        Enjoying the day 🌸
+    </p>
+
+    <!-- Comment Box -->
+    <form method="POST" class="comment-box">
+        <input type="text" name="comment" placeholder="Add a comment…" required>
+        <button type="submit">Post</button>
+    </form>
+
+    <!-- Messages -->
+    {% if message %}
+        <p class="success">{{ message }}</p>
+    {% endif %}
+
+    {% if warning %}
+        <p class="warning">{{ warning }}</p>
+        <img src="/static/warning.png" class="warning-img">
+    {% endif %}
+
+</div>
+
+</body>
+</html>

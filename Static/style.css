@@ -1,0 +1,95 @@
+body {
+    background: #fafafa;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto;
+}
+
+/* Main card */
+.insta-card {
+    width: 360px;
+    margin: 40px auto;
+    background: white;
+    border: 1px solid #dbdbdb;
+    border-radius: 6px;
+}
+
+/* Header */
+.insta-header {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.profile-pic {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743);
+    margin-right: 10px;
+}
+
+.username {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+/* Post image */
+.post-img {
+    width: 100%;
+}
+
+/* Icons */
+.actions {
+    padding: 8px 10px;
+    font-size: 18px;
+}
+
+/* Caption */
+.caption {
+    padding: 0 10px 10px;
+    font-size: 14px;
+}
+
+/* Comment box */
+.comment-box {
+    display: flex;
+    border-top: 1px solid #efefef;
+}
+
+.comment-box input {
+    flex: 1;
+    border: none;
+    padding: 10px;
+    outline: none;
+}
+
+.comment-box button {
+    border: none;
+    background: none;
+    color: #3897f0;
+    font-weight: bold;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* Messages */
+.success {
+    color: green;
+    font-size: 13px;
+    padding: 8px 10px;
+}
+
+.warning {
+    color: red;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 8px 10px;
+}
+
+/* Warning image */
+.warning-img {
+    width: 90%;
+    margin: 10px auto;
+    display: block;
+    border: 2px solid red;
+    border-radius: 5px;
+}
